@@ -6,29 +6,42 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="">
-		<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class();?>>
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-			<div class="navbar-header page-scroll">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	<body id="page-top" class="index" <?php body_class();?>>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-        		</button>
-				<a href="#page-top" class="navbar-brand"><?php bloginfo('title'); ?></a>
-			</div>
-				<?php
-					$menu_args = array(
-					            'theme_location' => 'primary',
-					            'container_class' => 'collapse navbar-collapse', 
-					            'container_id' => 'bs-example-navbar-collapse-1', 
-					            'menu_class' => 'nav navbar-nav navbar-right', 
-					    	);
-					wp_nav_menu($menu_args);
-				?>
-			</div>
-		</nav>
+                </button>
+                <a class="navbar-brand" href="#page-top"><?php bloginfo('title'); ?></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>

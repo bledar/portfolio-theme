@@ -2,12 +2,22 @@
 
 //ky funksion shton ne stilet e faqeve dhe scriptet ne fund te faqes
 function sitbej_script_enqueue(){
-    wp_enqueue_style( "bootstrap", "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css",array(), "3.3.6", "all" );
-    wp_enqueue_style( "main_style", get_template_directory_uri()."/css/main_style.css",array(), "1.0", "all" );
+    // styles
+    wp_enqueue_style( "bootstrap", get_template_directory_uri()."/css/bootstrap.min.css",array(), "3.3.6", "all" );
+    wp_enqueue_style( "font-Montserrat", "http://fonts.googleapis.com/css?family=Montserrat:400,700",array(), "3.3.6", "all" );
+    wp_enqueue_style( "font-Lato", "http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic",array(), "3.3.6", "all" );
+    wp_enqueue_style( "freelancer", get_template_directory_uri()."/css/freelancer.css",array(), "1.0", "all" );
+    wp_enqueue_style( "font-awesome", get_template_directory_uri()."/font-awesome/css/font-awesome.min.css",array(), "1.0", "all" );
+    // scripts
     wp_enqueue_script("jQuery","https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js",array(),"2.2.0",true);
     wp_enqueue_script("bootstrap","https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js",array(),"3.3.6",true);
-    wp_enqueue_script("main_script", get_template_directory_uri()."/js/script.js",array(),"1.0",true);
-	wp_enqueue_script("parallax", get_template_directory_uri()."/js/parallax.min.js",array(),"1.0",true);
+    wp_enqueue_script("jQ-easing","http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js",array(),"1.3",true);
+    wp_enqueue_script("parallax", get_template_directory_uri()."/js/parallax.min.js",array(),"1.0",true);
+    wp_enqueue_script("clasie", get_template_directory_uri()."/js/classie.js",array(),"1.0",true);
+    wp_enqueue_script("Animate", get_template_directory_uri()."/js/cbpAnimatedHeader.js",array(),"1.0",true);
+    wp_enqueue_script("costume-script", get_template_directory_uri()."/js/freelancer.js",array(),"1.0",true);
+    wp_enqueue_script("validation", get_template_directory_uri()."/js/jqBootstrapValidation.js",array(),"1.0",true);
+	wp_enqueue_script("form-proqesing", get_template_directory_uri()."/js/contact_me.js",array(),"1.0",true);
 }
 
 //kjo komande regjistron funksionin e mesiperm dhe ben ate aktv
