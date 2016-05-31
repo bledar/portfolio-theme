@@ -1,0 +1,96 @@
+/*@import url("reset.css");*/
+html body {
+    font-size: 16px;
+    color: #000;
+    height: 100%;
+    font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #e9e9e9;
+}
+.wrapper{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+.navbar{
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700; 
+    color: #fff;
+    border-bottom: none;
+}
+.navbar-brand {
+    float: left;
+    padding: 19.5px 15px;
+    font-size: 19px;
+    line-height: 21px;
+    height: 60px;
+    font-size: 2em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+.navbar-default{
+    background-color:#2C3E50;
+    text-transform: uppercase;
+    padding: 25px 0;
+}
+.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand,.navbar-default .navbar-nav>li>a{
+    color: #fff;  
+}
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-nav>li>a:hover{
+   color: #18bc9c;
+}
+.parallax-window {
+    margin-top: 110px;
+    min-height: 665px;
+    background: transparent;
+}
+header img {
+    display: block;
+    margin: 50px auto 20px;
+}
+header .intro-text{
+    color: #fff;
+    text-align: center;
+}
+.light-line .star-line{background-color: #fff;}
+.dark-line .star-line{background-color: #2C3E50; vertical-align: middle;}
+.light-line .star{color: #fff;}
+.dark-line .star{color:#2C3E50;}
+.star{font-size: 3em;padding: 0 10px; position: relative;top:.2em; line-height: 1em;}
+.star-line{
+    display: inline-block;
+    height: 5px;
+    width: 35%;
+}
+.portfolio{
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+.portfolio-items{
+    background-color: red;
+    margin: 0 0 30px;
+}
+.portfolio>h1{
+    color: #2C3E50;
+    font-weight: bold;
+    margin: 20px 0 0 0;
+}
+header .intro-text .skills{list-style: none;}
+header .intro-text .skills li{
+    display: inline-block; 
+    font-size: 1.75em;
+    font-weight: 300;
+    padding: 0 1.5em 0 0;
+}
+header .intro-text .name{font-size:4.5em;font-weight: bold;text-transform: uppercase; }
+@media screen and (max-width:768px) {
+        .navbar-default{
+        padding: 0px 0;
+    }
+    .parallax-window {
+        margin-top: 60px;
+        min-height: 665px;
+    }
+}
