@@ -21,7 +21,7 @@ function sitbej_script_enqueue(){
 }
 
 //kjo komande regjistron funksionin e mesiperm dhe ben ate aktv
-	add_action("wp_enqueue_scripts","sitbej_script_enqueue");
+add_action("wp_enqueue_scripts","sitbej_script_enqueue");
 
 //ben aktive menute ne wordpress dhe krijon dy tipe menushe te reja
 function sitebej_theme_setup(){
@@ -29,7 +29,7 @@ function sitebej_theme_setup(){
 	register_nav_menu( "primary","header navigations");
 	register_nav_menu( "secondary","footer navigations");
 }
-	//inicializon menute nga fuksioni i mesiperm
+//inicializon menute nga fuksioni i mesiperm
 add_action( "init", "sitebej_theme_setup");
 
 //ben qe per cdo post te kemi ospionin e future images
@@ -49,7 +49,6 @@ function clean_setup () {
 add_action('after_setup_theme', 'clean_setup');
 function expert_more_str($more){
     $str='</p><div class="readMore"><a href="%1$s">%2$s</a> </div>';
-
 	return sprintf( $str,
         get_permalink( get_the_ID() ),
         __( 'Read More', 'textdomain' )

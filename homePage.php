@@ -45,15 +45,25 @@ Template Name: Home template
                                 <div><?php the_title();?></div>
                             </div>
                         </div>
-                        <?php the_post_thumbnail( $size = 'post-thumbnail',array( 'class' => 'img-responsive')); ?>
-                        <?php //the_post_thumbnail('custom-size',array( 'class' => 'img-responsive'));  ?>
+                        <?php
+                            
+                            if ( has_post_thumbnail() ) {
+                                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
+                                echo '<img width="360" height="260" src="'.$thumb[0].'" claass="img-responsive"/>';
+                            }
+                            else {
+                                echo '<img width="360" height="260" src="' . get_bloginfo( 'stylesheet_directory' ) 
+                                    . '/images/thumbnail-default.png" claass="img-responsive"/>';
+                            }
+                        ?>
                     </a>
                 </div>
             <?php endwhile;?>
             <!-- end of portofolio loop -->
         </div>
     </section>
-<!-- end section portofolio -->
+<!-- End Section Portofolio -->
+
     <!-- About Section -->
     <section class="success" id="about">
         <div class="container">
@@ -64,11 +74,15 @@ Template Name: Home template
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                <div class="col-lg-6 col-lg-offset-3">
+                <?php 
+                    $about_post_id=33;
+                    $about  = get_post($about_post_id);
+                    $resume_link= get_post_custom_values("resume-link",$about_post_id);
+                    var_dump($resume_link);
+                ?>
+
+                <p><?php echo($about->post_content);?></p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="#" class="btn btn-lg btn-outline">
